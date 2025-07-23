@@ -1,3 +1,4 @@
+/* Reset and base styling */
 * {
   margin: 0;
   padding: 0;
@@ -11,12 +12,14 @@ body {
   line-height: 1.6;
 }
 
+/* Container */
 .container {
   max-width: 960px;
   margin: auto;
   padding: 2rem;
 }
 
+/* Hero section */
 .hero {
   background: linear-gradient(to right, #007acc, #005b99);
   color: white;
@@ -38,22 +41,26 @@ body {
   opacity: 0.9;
 }
 
+/* Headings */
 h2 {
   color: #007acc;
   margin-bottom: 1rem;
 }
 
+/* About, Projects, and Contact section styling */
 .about p,
 .project p,
 .contact ul {
   font-size: 1rem;
 }
 
+/* Projects Grid */
 .projects .project-list {
   display: grid;
   gap: 1.5rem;
 }
 
+/* Individual Project Card */
 .project {
   background: white;
   padding: 1.5rem;
@@ -62,6 +69,7 @@ h2 {
   box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
 
+/* Contact Section */
 .contact ul {
   list-style: none;
   padding: 0;
@@ -80,6 +88,7 @@ h2 {
   text-decoration: underline;
 }
 
+/* Footer */
 .footer {
   background: #eee;
   text-align: center;
