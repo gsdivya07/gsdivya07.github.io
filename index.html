@@ -4,107 +4,166 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Divya GS | Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: linear-gradient(135deg, #e8f0ff, #ffffff);
+      color: #333;
+      overflow-x: hidden;
+    }
+
+    header {
+      background-color: #007acc;
+      color: white;
+      padding: 4rem 2rem;
+      text-align: center;
+      animation: slideFade 1s ease-in-out forwards;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      opacity: 0.9;
+    }
+
+    section {
+      max-width: 960px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    h2 {
+      color: #007acc;
+      margin-bottom: 1rem;
+      position: relative;
+      display: inline-block;
+    }
+
+    h2::after {
+      content: '';
+      display: block;
+      height: 3px;
+      width: 50%;
+      background: #007acc;
+      margin-top: 4px;
+      border-radius: 2px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 10px;
+      padding: 1.5rem;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      margin-bottom: 1.5rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      animation: fadeUp 1s ease-in;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    footer {
+      background: #f0f0f0;
+      padding: 2rem;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #555;
+      margin-top: 4rem;
+    }
+
+    @keyframes slideFade {
+      0% {
+        transform: translateY(-40px);
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes fadeUp {
+      0% {
+        transform: translateY(30px);
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+  </style>
 </head>
 <body>
-  <header class="hero">
-    <h1>Hi, I'm <span>Divya GS</span></h1>
-    <p>Software Developer | PHP | WordPress | AI Tools Enthusiast</p>
-    <p>Bangalore, India | 📞 +91 8073577638 | ✉️ gsdivya07@gmail.com</p>
-    <p>
-      💻 <a href="https://github.com/gsdivya07" target="_blank">GitHub</a> |
-      🔗 <a href="https://linkedin.com/in/divyags07" target="_blank">LinkedIn</a> |
-      🌐 <a href="https://gsdivya07.github.io" target="_blank">Portfolio</a>
-    </p>
+  <header>
+    <h1>Divya GS</h1>
+    <p>Software Developer | PHP, WordPress, Java | AI Enthusiast</p>
   </header>
 
-  <main class="container">
-    <section class="about">
-      <h2>Professional Summary</h2>
-      <p>
-        Self-motivated and detail-oriented Software Developer, currently working at C2CAS,
-        contributing to dynamic web application development. Specialized in PHP and WordPress,
-        and interested in expanding into Java and React-based projects. Proficient in using AI tools
-        to boost coding efficiency and streamline workflows. Familiar with manual testing practices.
-        Passionate about clean code, continuous learning, and solving real-world challenges through technology.
-      </p>
-    </section>
+  <section>
+    <h2>Professional Summary</h2>
+    <div class="card">
+      <p>Self-motivated and detail-oriented Software Developer, currently working at C2CAS, contributing to dynamic web applications. Specialized in PHP & WordPress, with interest in Java & React. Familiar with manual testing & AI tools to enhance development workflows.</p>
+    </div>
 
-    <section class="skills">
-      <h2>Technical Skills</h2>
+    <h2>Technical Skills</h2>
+    <div class="card">
       <ul>
         <li><strong>Front-End:</strong> HTML, CSS, JavaScript</li>
         <li><strong>Back-End:</strong> PHP, MySQL</li>
-        <li><strong>Programming Languages:</strong> Python (Beginner), Java (Beginner)</li>
-        <li><strong>Development Tools:</strong> phpMyAdmin, Git, VS Code</li>
+        <li><strong>Languages:</strong> Python (Beginner), Java (Beginner)</li>
+        <li><strong>Tools:</strong> phpMyAdmin, Git, VS Code</li>
         <li><strong>Multimedia:</strong> Video & Photo Editing</li>
       </ul>
-    </section>
+    </div>
 
-    <section class="education">
-      <h2>Education</h2>
-      <p><strong>B.E – Computer Science Engineering</strong>, MVJCE, Bangalore (2023–2025)</p>
-      <p><strong>Diploma – Computer Science Engineering</strong>, GPTC, Bangalore (2019–2022)</p>
-    </section>
-
-    <section class="experience">
-      <h2>Experience</h2>
-      <p><strong>Software Developer</strong>, C2CAS Pvt. Ltd. — (Jul 2024 – Present)</p>
+    <h2>Experience</h2>
+    <div class="card">
+      <p><strong>C2CAS Pvt. Ltd.</strong> — Software Developer (Jul 2024 – Present)</p>
       <ul>
-        <li>Contributed to live projects including HRMS (PHP CI4), Parkeze, and Company Website (WordPress).</li>
-        <li>Handled code migration from CodeIgniter 3 to 4 ensuring smooth performance.</li>
-        <li>Raised and tracked tickets for issue resolution and workflow management.</li>
+        <li>HRMS: Developed attendance, leave & payroll modules (CodeIgniter 4).</li>
+        <li>Parkeze: Built parking management system with user role handling.</li>
+        <li>Company Website: Designed using WordPress.</li>
+        <li>Legacy Code Migration: CI3 to CI4.</li>
       </ul>
-    </section>
+    </div>
 
-    <section class="internships">
-      <h2>Internships</h2>
+    <h2>Projects</h2>
+    <div class="card">
+      <p><strong>Readify – AI-Powered English Conversation App:</strong> Built to assess pronunciation & fluency using voice-to-text.</p>
+      <p><strong>Online Voting System:</strong> Spring Boot-based voting system with role-based access and real-time results.</p>
+      <p><strong>Child Care Management System:</strong> Java-based app with role login and health/staff log management.</p>
+      <p><strong>Smart Car Parking System:</strong> Python GUI-based slot detector and availability dashboard.</p>
+      <p><strong>Finger Count Navigation System:</strong> Computer vision project for hand gesture navigation.</p>
+    </div>
+
+    <h2>Contact</h2>
+    <div class="card">
       <ul>
-        <li><strong>C2CAS Pvt. Ltd.:</strong> 8-month internship in PHP development using CodeIgniter 4.</li>
-        <li><strong>Dotch Endeavours – Python (AI/ML):</strong> Built projects using Pandas, NumPy, scikit-learn.</li>
-        <li><strong>Dotch Endeavours – Full Stack:</strong> Created dynamic web apps using HTML, CSS, JavaScript, PHP.</li>
+        <li><strong>Email:</strong> gsdivya07@gmail.com</li>
+        <li><strong>Phone:</strong> +91 8073577638</li>
+        <li><strong>GitHub:</strong> github.com/gsdivya07</li>
+        <li><strong>LinkedIn:</strong> linkedin.com/in/divyags07</li>
+        <li><strong>Portfolio:</strong> gsdivya07.github.io</li>
       </ul>
-    </section>
+    </div>
+  </section>
 
-    <section class="projects">
-      <h2>Projects</h2>
-      <div class="project-list">
-        <div class="project">
-          <h3>Online Voting System</h3>
-          <p>Spring Boot app for secure institutional voting with role-based access, vote tracking, and real-time result display.</p>
-        </div>
-        <div class="project">
-          <h3>Child Care Management System</h3>
-          <p>Desktop app to track child data, health, and attendance with role-based login. Tech: Java</p>
-        </div>
-        <div class="project">
-          <h3>Smart Car Parking System</h3>
-          <p>GUI tool to simulate and track real-time parking slot availability. Tech: Python</p>
-        </div>
-        <div class="project">
-          <h3>Finger Count Navigation System</h3>
-          <p>Computer vision-based gesture controller using webcam input. Tech: Python</p>
-        </div>
-        <div class="project">
-          <h3>Readify – AI English App</h3>
-          <p>AI-powered web app to help users improve English by reading aloud and getting instant feedback. Tech: Python</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="certifications">
-      <h2>Certifications</h2>
-      <ul>
-        <li>Full Stack Web Dev & Python AI/ML – Dotch Endeavours</li>
-        <li>Infosys Springboard – Basics of Python</li>
-        <li>Skill Desk – IoT Training</li>
-        <li>C++ – SoftTech</li>
-      </ul>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <p>&copy; 2025 Divya GS. All rights reserved.</p>
+  <footer>
+    &copy; 2025 Divya GS. All Rights Reserved.
   </footer>
 </body>
 </html>
