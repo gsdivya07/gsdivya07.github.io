@@ -1,201 +1,65 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Divya GS | Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Divya's Portfolio</title>
   <link rel="stylesheet" href="style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
-  <header class="hero">
-    <div class="overlay"></div>
-    <div class="content">
-      <h1>Divya GS</h1>
-      <p class="subtitle">Software Developer | PHP, CodeIgniter, AI Enthusiast</p>
-      <p class="description">Based in Bangalore, India — I build efficient and creative web applications using PHP, MySQL, and CodeIgniter, and explore AI-based solutions for real-world problems.</p>
-      <a href="#about" class="btn">Explore More</a>
-    </div>
+  <header>
+    <h1>Divya</h1>
+    <p class="subtitle">Aspiring Software Developer</p>
   </header>
 
-  <section id="about">
-    <div class="container">
-      <h2>About Me</h2>
-      <p>I’m a passionate developer at C2CAS, contributing to HRMS and ticket management tools, always looking to grow into Java and React-based projects. Skilled in using AI tools and good at manual testing practices.</p>
+  <div class="menu-wrapper">
+    <div class="menu-column left">
+      <div class="menu" onclick="showContent('about')">About Me</div>
+      <div class="menu" onclick="showContent('skills')">Technical Skills</div>
+      <div class="menu" onclick="showContent('projects')">Projects</div>
     </div>
-  </section>
+    
+    <div class="menu-column right">
+      <div class="menu" onclick="showContent('experience')">Experience</div>
+      <div class="menu" onclick="showContent('education')">Education</div>
+      <div class="menu" onclick="showContent('certifications')">Certifications</div>
+    </div>
+  </div>
 
-  <section id="skills">
-    <div class="container">
-      <h2>Technical Skills</h2>
-      <ul>
-        <li>Front-End: HTML, CSS, JavaScript</li>
-        <li>Back-End: PHP, MySQL</li>
-        <li>Languages: Python (Beginner), Java (Beginner)</li>
-        <li>Tools: phpMyAdmin, Git, VS Code</li>
-        <li>Multimedia: Video & Photo Editing</li>
-      </ul>
-    </div>
-  </section>
+  <div class="menu-bottom">
+    <div class="menu" onclick="showContent('contact')">Contact</div>
+  </div>
 
-  <section id="projects">
-    <div class="container">
-      <h2>Projects</h2>
-      <ul>
-        <li><strong>Online Voting System</strong> – Java (Spring Boot), role-based access, vote integrity, real-time results.</li>
-        <li><strong>Child Care Management System</strong> – PHP, registration, attendance, reports.</li>
-        <li><strong>Smart Car Parking System</strong> – Python, real-time slot detection.</li>
-        <li><strong>Finger Count Navigation</strong> – Python, hand gesture recognition using webcam.</li>
-        <li><strong>Readify</strong> – Python AI, voice-to-text feedback system for English learning.</li>
-      </ul>
-    </div>
-  </section>
-
-  <section id="experience">
-    <div class="container">
-      <h2>Experience</h2>
-      <p><strong>Software Developer at C2CAS Pvt. Ltd. (Jul 2024 – Present)</strong></p>
-      <ul>
-        <li>Developed modules for HRMS in CodeIgniter 4 (attendance, leave, payroll)</li>
-        <li>Worked on Parkeze – a smart parking management system</li>
-        <li>Maintained company website in WordPress</li>
-        <li>Code migration from CI3 to CI4</li>
-      </ul>
-    </div>
-  </section>
-
-  <section id="education">
-    <div class="container">
-      <h2>Education</h2>
-      <ul>
-        <li>B.E – Computer Science Engineering, MVJCE, Bangalore (2023–2025)</li>
-        <li>Diploma – Computer Science Engineering, GPTC, Bangalore (2019–2022)</li>
-      </ul>
-    </div>
-  </section>
-
-  <section id="certifications">
-    <div class="container">
-      <h2>Certifications</h2>
-      <ul>
-        <li>Full Stack & Python AI/ML – Dotch Endeavours</li>
-        <li>Infosys Springboard – Basics of Python</li>
-        <li>IoT Certification – Skill Desk</li>
-        <li>C++ – SoftTech</li>
-      </ul>
-    </div>
-  </section>
+  <main id="content-display">
+    <p>Select a section to view details here.</p>
+  </main>
 
   <footer>
-    <div class="container">
-      <p>📍 Bangalore, India | 📞 +91 8073577638 | ✉️ gsdivya07@gmail.com</p>
-      <p>💻 <a href="https://github.com/gsdivya07">github.com/gsdivya07</a> | 🔗 <a href="https://linkedin.com/in/divyags07">linkedin.com/in/divyags07</a> | 🌐 <a href="https://gsdivya07.github.io">gsdivya07.github.io</a></p>
-    </div>
+    <p>&copy; 2025 Divya | <a href="https://linkedin.com/in/your-link" target="_blank">LinkedIn</a> |
+       <a href="https://github.com/your-link" target="_blank">GitHub</a></p>
   </footer>
+
+  <script>
+    const contentData = {
+      about: `<h2>About Me</h2><p>Hello! I'm Divya, an aspiring software developer passionate about building smart, scalable, and user-centric applications. I enjoy solving real-world problems through clean code.</p>`,
+      skills: `<h2>Technical Skills</h2>
+              <ul>
+                <li>HTML, CSS, JavaScript</li>
+                <li>PHP, MySQL, DBMS</li>
+                <li>Python (Basic), Java (Basic)</li>
+                <li>Git, VS Code, phpMyAdmin</li>
+                <li>Video & Photo Editing (VFX & Basic Editing)</li>
+              </ul>`,
+      projects: `<h2>Projects</h2><p>• HRMS Portal<br>• AI-Powered English Conversation Learning Web App<br>• Readify: Smart Learning Platform</p>`,
+      experience: `<h2>Experience</h2><p>1+ years experience in PHP and WordPress Development at C2CAS.</p>`,
+      education: `<h2>Education</h2><p>Bachelor of Technology in Computer Science and Engineering</p>`,
+      certifications: `<h2>Certifications</h2><ul><li>PHP Web Development</li><li>WordPress Customization</li><li>AI Tools & ChatGPT Prompt Engineering</li></ul>`,
+      contact: `<h2>Contact</h2><p>Email: your.email@example.com<br>Phone: +91-XXXXXXXXXX<br>Location: India</p>`
+    };
+
+    function showContent(section) {
+      document.getElementById('content-display').innerHTML = contentData[section] || "<p>Content not available.</p>";
+    }
+  </script>
 </body>
-
 </html>
-
-/* style.css */
-body {
-  margin: 0;
-  font-family: 'Montserrat', sans-serif;
-  background: #f8f9fa;
-  color: #333;
-  scroll-behavior: smooth;
-}
-
-header.hero {
-  position: relative;
-  height: 100vh;
-  background: url('your-local-image.jpg') no-repeat center center/cover;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  color: white;
-}
-
-header.hero .overlay {
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background-color: rgba(0, 0, 0, 0.6);
-  z-index: 1;
-}
-
-header.hero .content {
-  position: relative;
-  z-index: 2;
-  max-width: 700px;
-  animation: fadeInUp 2s ease-out;
-}
-
-h1 {
-  font-size: 3rem;
-  margin: 0;
-}
-
-.subtitle {
-  font-size: 1.3rem;
-  margin-top: 0.5rem;
-}
-
-.description {
-  margin-top: 1rem;
-  font-size: 1rem;
-  line-height: 1.6;
-}
-
-.btn {
-  display: inline-block;
-  margin-top: 1.5rem;
-  padding: 0.75rem 1.5rem;
-  background-color: #007bff;
-  color: white;
-  border-radius: 4px;
-  text-decoration: none;
-  transition: background-color 0.3s ease;
-}
-
-.btn:hover {
-  background-color: #0056b3;
-}
-
-section {
-  padding: 3rem 1rem;
-  background: white;
-  border-bottom: 1px solid #ddd;
-}
-
-.container {
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-footer {
-  background: #222;
-  color: white;
-  text-align: center;
-  padding: 2rem 1rem;
-}
-
-footer a {
-  color: #0dcaf0;
-  text-decoration: none;
-}
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
