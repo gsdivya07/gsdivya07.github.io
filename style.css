@@ -1,88 +1,75 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
+/* Reset and base styles */
 body {
-  font-family: 'Poppins', sans-serif;
-  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: radial-gradient(circle at top left, #0f2027, #203a43, #2c5364);
   color: #fff;
-  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 40px 20px;
+  min-height: 100vh;
 }
 
+/* Card Container */
 .container {
-  max-width: 850px;
-  text-align: center;
-  background: rgba(0, 0, 0, 0.6);
-  padding: 60px;
-  border-radius: 16px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
-  animation: fadeIn 1.5s ease;
+  padding: 20px;
 }
 
+.card {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 40px 30px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  max-width: 700px;
+  margin: auto;
+}
+
+/* Profile Image */
+.profile-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+  border: 4px solid #00d9ff;
+}
+
+/* Headings */
 h1 {
-  font-size: 2.8rem;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
   font-weight: 700;
-  letter-spacing: 2px;
+}
+
+h3 {
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: #ccc;
+  margin-bottom: 20px;
+}
+
+/* Paragraphs */
+p {
+  font-size: 1rem;
+  color: #ddd;
+  line-height: 1.6;
   margin-bottom: 15px;
 }
 
-.subtitle {
-  font-size: 1rem;
-  font-weight: 500;
-  color: #ccc;
-  margin-bottom: 30px;
-}
-
-.description {
-  font-size: 1rem;
-  line-height: 1.7;
-  color: #ddd;
-}
-
+/* Button */
 .btn {
-  margin-top: 35px;
   display: inline-block;
-  padding: 12px 28px;
-  background: #00c6ff;
+  margin-top: 20px;
+  background-color: #00d9ff;
   color: #000;
-  border-radius: 50px;
+  padding: 12px 25px;
+  border-radius: 30px;
+  font-weight: bold;
   text-decoration: none;
-  font-weight: 600;
-  transition: all 0.3s ease;
+  transition: background 0.3s;
 }
 
 .btn:hover {
-  background: #0072ff;
-  color: white;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(40px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@media (max-width: 600px) {
-  .container {
-    padding: 40px 20px;
-  }
-
-  h1 {
-    font-size: 2rem;
-  }
-
-  .description {
-    font-size: 0.9rem;
-  }
+  background-color: #00bcd4;
 }
